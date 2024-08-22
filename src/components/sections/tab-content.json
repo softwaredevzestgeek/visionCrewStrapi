@@ -1,0 +1,56 @@
+{
+  "collectionName": "components_sections_tab_contents",
+  "info": {
+    "displayName": "Tab Content",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "project_title": {
+      "type": "string"
+    },
+    "time_duration": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "challanges": {
+      "type": "blocks"
+    },
+    "client_details": {
+      "type": "string"
+    },
+    "client_reviews": {
+      "type": "blocks"
+    },
+    "photos": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "link": {
+      "type": "text"
+    },
+    "tech_stacks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tech-stack.tech-stack"
+    },
+    "header_description": {
+      "type": "text"
+    },
+    "reviews": {
+      "type": "boolean"
+    },
+    "projectSlug": {
+      "type": "string"
+    },
+    "categorizedSlug": {
+      "type": "string"
+    }
+  }
+}

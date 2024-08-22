@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "case_studie_cards",
+  "info": {
+    "singularName": "case-studie-card",
+    "pluralName": "case-studie-cards",
+    "displayName": "case_studie_Card",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tabs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.tab"
+    }
+  }
+}

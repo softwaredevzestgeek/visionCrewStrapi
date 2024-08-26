@@ -13,7 +13,7 @@
 
 module.exports = ({ env }) => {
   // Log the port for debugging
-  console.log(`Starting Strapi on port ${env('PORT')}`);
+  console.log(`Starting Strapi on port ${env('PORT')} ${process.env.PORT}`);
 
   return {
     host: env('HOST', '0.0.0.0'), // Ensure Strapi listens on all network interfaces

@@ -17,7 +17,7 @@ module.exports = ({ env }) => {
 
   return {
     host: env('HOST', '0.0.0.0'), // Ensure Strapi listens on all network interfaces
-    port: env.int('PORT', process.env.PORT || 1337), // Use environment variable PORT if set
+    port: env('PORT') || 1337, // Use environment variable PORT if set
     app: {
       keys: env.array('APP_KEYS'),
     },

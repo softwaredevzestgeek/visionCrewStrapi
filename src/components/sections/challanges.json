@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_sections_challanges",
+  "info": {
+    "displayName": "Challanges",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "challange": {
+      "type": "blocks"
+    },
+    "challangeIcon": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "IconBool": {
+      "type": "boolean"
+    }
+  }
+}

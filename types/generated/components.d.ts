@@ -38,6 +38,24 @@ export interface SectionsTabContent extends Schema.Component {
     reviews: Attribute.Boolean;
     projectSlug: Attribute.String;
     categorizedSlug: Attribute.String;
+    technicalChallenges: Attribute.Component<'sections.challanges', true> &
+      Attribute.Required;
+  };
+}
+
+export interface SectionsChallanges extends Schema.Component {
+  collectionName: 'components_sections_challanges';
+  info: {
+    displayName: 'Challanges';
+    description: '';
+  };
+  attributes: {
+    challange: Attribute.Blocks;
+    challangeIcon: Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    IconBool: Attribute.Boolean;
   };
 }
 
@@ -58,6 +76,7 @@ declare module '@strapi/types' {
     export interface Components {
       'sections.tab': SectionsTab;
       'sections.tab-content': SectionsTabContent;
+      'sections.challanges': SectionsChallanges;
       'collaborations.brands': CollaborationsBrands;
     }
   }

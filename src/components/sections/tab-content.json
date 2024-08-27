@@ -51,6 +51,12 @@
     },
     "categorizedSlug": {
       "type": "string"
+    },
+    "technicalChallenges": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.challanges",
+      "required": true
     }
   }
 }

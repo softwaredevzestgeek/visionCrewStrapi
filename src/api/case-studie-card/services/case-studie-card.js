@@ -19,12 +19,14 @@ module.exports = {
                     populate: {
                         content: {
                             populate: {
-
                                 tech_stacks: {
                                     populate: ['techName']
                                 },
                                 photos:{
                                     populate: ["url"]
+                                },
+                                technicalChallenges:{
+                                    populate: '*'
                                 }
                             }
 

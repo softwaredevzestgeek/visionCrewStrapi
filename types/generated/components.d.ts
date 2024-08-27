@@ -38,8 +38,7 @@ export interface SectionsTabContent extends Schema.Component {
     reviews: Attribute.Boolean;
     projectSlug: Attribute.String;
     categorizedSlug: Attribute.String;
-    technicalChallenges: Attribute.Component<'sections.challanges', true> &
-      Attribute.Required;
+    technicalChallenges: Attribute.Component<'sections.challanges', true>;
   };
 }
 

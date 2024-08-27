@@ -24,7 +24,6 @@ export interface SectionsTabContent extends Schema.Component {
     project_title: Attribute.String;
     time_duration: Attribute.String;
     description: Attribute.Blocks;
-    challanges: Attribute.Blocks;
     client_details: Attribute.String;
     client_reviews: Attribute.Blocks;
     photos: Attribute.Media<'images', true>;

@@ -15,9 +15,6 @@
     "description": {
       "type": "blocks"
     },
-    "challanges": {
-      "type": "blocks"
-    },
     "client_details": {
       "type": "string"
     },

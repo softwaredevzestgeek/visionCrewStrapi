@@ -1,4 +1,4 @@
-module.exports = [
+module.exports = ({ env }) =>[
   'strapi::errors',
   {
     name: 'strapi::cors',
@@ -13,7 +13,17 @@ module.exports = [
       ],
     },
   },
-  'strapi::security',
+  {
+    name: 'strapi::security',
+    config: {
+      contentSecurityPolicy: {
+        directives: {
+          'script-src': ["'self'", "'unsafe-inline'", 'cdn.jsdelivr.net'],
+          'img-src': ["'self'", 'data:', 'cdn.jsdelivr.net', 'strapi.io', `res.cloudinary.com`],
+        },
+      }
+    },
+  },
   'strapi::poweredBy',
   'strapi::logger',
   'strapi::query',

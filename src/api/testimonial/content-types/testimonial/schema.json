@@ -17,7 +17,13 @@
     },
     "description": {
       "type": "text"
+    },
+    "Avatar": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
-

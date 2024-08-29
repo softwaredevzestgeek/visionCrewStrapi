@@ -16,9 +16,6 @@
       "allowedTypes": [
         "images"
       ]
-    },
-    "IconBool": {
-      "type": "boolean"
     }
   }
 }

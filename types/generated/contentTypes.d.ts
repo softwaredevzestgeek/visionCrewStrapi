@@ -930,6 +930,7 @@ export interface ApiTestimonialTestimonial extends Schema.CollectionType {
   attributes: {
     User_name: Attribute.String;
     description: Attribute.Text;
+    Avatar: Attribute.Media<'images'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

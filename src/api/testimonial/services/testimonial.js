@@ -17,7 +17,14 @@ const { sanitize } = require('@strapi/utils');
 module.exports = {
     async find(ctx) {
         const entities = await strapi.entityService.findPage('api::testimonial.testimonial', {
-            populate:"*" // Populate everything in the home-page content type
+            populate: {
+                '*': {
+                    populate: '*'
+                },
+                Avatar: {
+                    populate: ['url']
+                }
+            }
         });
 
         const sanitizedEntities = await sanitize.contentAPI.output(entities, strapi.getModel('api::testimonial.testimonial'));

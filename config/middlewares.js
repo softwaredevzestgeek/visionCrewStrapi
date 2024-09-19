@@ -3,7 +3,7 @@ module.exports = ({ env }) =>[
   {
     name: 'strapi::cors',
     config: {
-      origin: ['https://vision-crew.vercel.app', 'http://localhost:3000'], 
+      origin: ['https://vision-crew.vercel.app', 'http://localhost:3000', 'https://www.visioncrew.co', 'https://visioncrew.co'], 
       headers: [
         'Content-Type',
         'Authorization',

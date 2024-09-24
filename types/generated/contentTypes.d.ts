@@ -852,6 +852,36 @@ export interface ApiContactDetailContactDetail extends Schema.SingleType {
   };
 }
 
+export interface ApiDetailDetail extends Schema.CollectionType {
+  collectionName: 'details';
+  info: {
+    singularName: 'detail';
+    pluralName: 'details';
+    displayName: 'Detail';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    formDetail: Attribute.Component<'user-form.user-form'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::detail.detail',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::detail.detail',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiHomePageHomePage extends Schema.SingleType {
   collectionName: 'home_pages';
   info: {
@@ -877,6 +907,36 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::home-page.home-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiServiceService extends Schema.CollectionType {
+  collectionName: 'services';
+  info: {
+    singularName: 'service';
+    pluralName: 'services';
+    displayName: 'Service';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::service.service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::service.service',
       'oneToOne',
       'admin::user'
     > &
@@ -969,7 +1029,9 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::case-studie-card.case-studie-card': ApiCaseStudieCardCaseStudieCard;
       'api::contact-detail.contact-detail': ApiContactDetailContactDetail;
+      'api::detail.detail': ApiDetailDetail;
       'api::home-page.home-page': ApiHomePageHomePage;
+      'api::service.service': ApiServiceService;
       'api::tech-stack.tech-stack': ApiTechStackTechStack;
       'api::testimonial.testimonial': ApiTestimonialTestimonial;
     }

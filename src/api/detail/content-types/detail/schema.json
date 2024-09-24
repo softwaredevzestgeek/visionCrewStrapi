@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "details",
+  "info": {
+    "singularName": "detail",
+    "pluralName": "details",
+    "displayName": "Detail"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "formDetail": {
+      "type": "component",
+      "repeatable": false,
+      "component": "user-form.user-form"
+    }
+  }
+}

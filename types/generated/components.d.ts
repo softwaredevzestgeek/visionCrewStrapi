@@ -1,5 +1,24 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface UserFormUserForm extends Schema.Component {
+  collectionName: 'components_user_form_user_forms';
+  info: {
+    displayName: 'userForm';
+    description: '';
+  };
+  attributes: {
+    name: Attribute.String;
+    phoneNumber: Attribute.BigInteger;
+    email: Attribute.Email;
+    businessName: Attribute.String;
+    services: Attribute.Relation<
+      'user-form.user-form',
+      'oneToMany',
+      'api::service.service'
+    >;
+  };
+}
+
 export interface SectionsTab extends Schema.Component {
   collectionName: 'components_sections_tabs';
   info: {
@@ -68,6 +87,7 @@ export interface CollaborationsBrands extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'user-form.user-form': UserFormUserForm;
       'sections.tab': SectionsTab;
       'sections.tab-content': SectionsTabContent;
       'sections.challanges': SectionsChallanges;

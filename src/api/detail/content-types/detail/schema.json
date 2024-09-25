@@ -4,17 +4,30 @@
   "info": {
     "singularName": "detail",
     "pluralName": "details",
-    "displayName": "Detail"
+    "displayName": "Detail",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "formDetail": {
-      "type": "component",
-      "repeatable": false,
-      "component": "user-form.user-form"
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "phoneNumber": {
+      "type": "biginteger"
+    },
+    "businessName": {
+      "type": "string"
+    },
+    "services": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service.service"
     }
   }
 }

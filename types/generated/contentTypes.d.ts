@@ -858,12 +858,21 @@ export interface ApiDetailDetail extends Schema.CollectionType {
     singularName: 'detail';
     pluralName: 'details';
     displayName: 'Detail';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    formDetail: Attribute.Component<'user-form.user-form'>;
+    name: Attribute.String;
+    email: Attribute.Email;
+    phoneNumber: Attribute.BigInteger;
+    businessName: Attribute.String;
+    services: Attribute.Relation<
+      'api::detail.detail',
+      'oneToMany',
+      'api::service.service'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

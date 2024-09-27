@@ -18,16 +18,8 @@
     "email": {
       "type": "email"
     },
-    "phoneNumber": {
-      "type": "biginteger"
-    },
-    "businessName": {
-      "type": "string"
-    },
-    "services": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::service.service"
+    "message": {
+      "type": "text"
     }
   }
 }

@@ -866,13 +866,7 @@ export interface ApiDetailDetail extends Schema.CollectionType {
   attributes: {
     name: Attribute.String;
     email: Attribute.Email;
-    phoneNumber: Attribute.BigInteger;
-    businessName: Attribute.String;
-    services: Attribute.Relation<
-      'api::detail.detail',
-      'oneToMany',
-      'api::service.service'
-    >;
+    message: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

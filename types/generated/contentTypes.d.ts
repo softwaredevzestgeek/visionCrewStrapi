@@ -788,6 +788,52 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiAboutUsAboutUs extends Schema.SingleType {
+  collectionName: 'about_uses';
+  info: {
+    singularName: 'about-us';
+    pluralName: 'about-uses';
+    displayName: 'about_us';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    description: Attribute.Text;
+    title: Attribute.Text;
+    title_img: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    who_we_are: Attribute.Text;
+    what_we_do: Attribute.Text;
+    why_choose_us: Attribute.Text;
+    why_choose_vs_crew: Attribute.Text;
+    empower_img: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    tech_solution_img: Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    expert_team_img: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    problem_solving_img: Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    our_vision: Attribute.Text;
+    our_mission: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::about-us.about-us',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::about-us.about-us',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCaseStudieCardCaseStudieCard extends Schema.SingleType {
   collectionName: 'case_studie_cards';
   info: {
@@ -1030,6 +1076,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::about-us.about-us': ApiAboutUsAboutUs;
       'api::case-studie-card.case-studie-card': ApiCaseStudieCardCaseStudieCard;
       'api::contact-detail.contact-detail': ApiContactDetailContactDetail;
       'api::detail.detail': ApiDetailDetail;

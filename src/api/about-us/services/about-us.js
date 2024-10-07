@@ -4,6 +4,16 @@
  * about-us service
  */
 
-const { createCoreService } = require('@strapi/strapi').factories;
+const { sanitize } = require('@strapi/utils');
 
-module.exports = createCoreService('api::about-us.about-us');
+module.exports = {
+    async find(ctx) {
+        const entities = await strapi.entityService.findPage('api::about-us.about-us', {
+            populate: '*'
+        });
+
+        const sanitizedEntities = await sanitize.contentAPI.output(entities, strapi.getModel('api::case-studie-card.case-studie-card'));
+
+        return sanitizedEntities;
+    },
+};

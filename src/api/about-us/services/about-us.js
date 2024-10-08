@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * about-us service
+  * about-us service
  */
 
 const { sanitize } = require('@strapi/utils');

@@ -805,7 +805,6 @@ export interface ApiAboutUsAboutUs extends Schema.SingleType {
     title_img: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     who_we_are: Attribute.Text;
     what_we_do: Attribute.Text;
-    why_choose_us: Attribute.Text;
     why_choose_vs_crew: Attribute.Text;
     empower_img: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     tech_solution_img: Attribute.Media<
@@ -817,11 +816,7 @@ export interface ApiAboutUsAboutUs extends Schema.SingleType {
     >;
     our_vision: Attribute.Text;
     our_mission: Attribute.Text;
-    who_we_are_icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    what_we_do_icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    why_choose_us_icon: Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
+    who_we_help: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

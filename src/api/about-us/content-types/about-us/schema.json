@@ -35,9 +35,6 @@
     "what_we_do": {
       "type": "text"
     },
-    "why_choose_us": {
-      "type": "text"
-    },
     "why_choose_vs_crew": {
       "type": "text"
     },
@@ -91,35 +88,8 @@
     "our_mission": {
       "type": "text"
     },
-    "who_we_are_icon": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": false
-    },
-    "what_we_do_icon": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": false
-    },
-    "why_choose_us_icon": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": false
+    "who_we_help": {
+      "type": "text"
     }
   }
 }

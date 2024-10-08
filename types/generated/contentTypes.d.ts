@@ -794,6 +794,7 @@ export interface ApiAboutUsAboutUs extends Schema.SingleType {
     singularName: 'about-us';
     pluralName: 'about-uses';
     displayName: 'about_us';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -816,6 +817,11 @@ export interface ApiAboutUsAboutUs extends Schema.SingleType {
     >;
     our_vision: Attribute.Text;
     our_mission: Attribute.Text;
+    who_we_are_icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    what_we_do_icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    why_choose_us_icon: Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

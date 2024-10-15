@@ -92,16 +92,39 @@
       "type": "text"
     },
     "who_we_are_icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "what_we_do_icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "who_we_help_icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "our_vision_icon": {
       "allowedTypes": [
         "images",
         "files",
@@ -111,7 +134,7 @@
       "type": "media",
       "multiple": false
     },
-    "who_we_help_icon": {
+    "our_mission_icon": {
       "allowedTypes": [
         "images",
         "files",

@@ -820,6 +820,8 @@ export interface ApiAboutUsAboutUs extends Schema.SingleType {
     who_we_are_icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     what_we_do_icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     who_we_help_icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    our_vision_icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    our_mission_icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

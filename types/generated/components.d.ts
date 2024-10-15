@@ -1,5 +1,17 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface CollaborationsBrands extends Schema.Component {
+  collectionName: 'components_collaborations_brands';
+  info: {
+    displayName: 'Brands';
+    description: '';
+  };
+  attributes: {
+    label: Attribute.String;
+    Images: Attribute.Media<'images', true>;
+  };
+}
+
 export interface SectionsTab extends Schema.Component {
   collectionName: 'components_sections_tabs';
   info: {
@@ -53,25 +65,13 @@ export interface SectionsChallanges extends Schema.Component {
   };
 }
 
-export interface CollaborationsBrands extends Schema.Component {
-  collectionName: 'components_collaborations_brands';
-  info: {
-    displayName: 'Brands';
-    description: '';
-  };
-  attributes: {
-    label: Attribute.String;
-    Images: Attribute.Media<'images', true>;
-  };
-}
-
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'collaborations.brands': CollaborationsBrands;
       'sections.tab': SectionsTab;
       'sections.tab-content': SectionsTabContent;
       'sections.challanges': SectionsChallanges;
-      'collaborations.brands': CollaborationsBrands;
     }
   }
 }
